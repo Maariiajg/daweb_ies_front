@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { MatriculaService, Matricula as MatriculaModel } from '../../services/matricula';
 
 @Component({
   selector: 'app-matricula',
@@ -6,6 +7,15 @@ import { Component } from '@angular/core';
   templateUrl: './matricula.html',
   styleUrl: './matricula.css',
 })
-export class Matricula {
+export class Matricula implements OnInit {
+  matriculas: MatriculaModel[] = [];
 
+  constructor(private service: MatriculaService) { }
+
+  ngOnInit() {
+    this.service.getMatriculas().subscribe({
+      next: (data) => this.matriculas = data,
+      error: (err) => console.error("Error al cargar matrículas", err)
+    });
+  }
 }

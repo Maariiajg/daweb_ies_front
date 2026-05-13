@@ -1,0 +1,46 @@
+.hero {
+    text-align: center;
+    padding: var(--space-xl) 0;
+    margin-bottom: var(--space-xl);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: var(--space-sm);
+}
+
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-muted);
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-lg);
+}
+
+.nav-card {
+    cursor: pointer;
+    text-align: center;
+    padding: var(--space-xl);
+}
+
+.nav-card .icon {
+    font-size: 3rem;
+    margin-bottom: var(--space-md);
+}
+
+.nav-card h3 {
+    margin-bottom: var(--space-sm);
+}
+
+.nav-card p {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
+
+.nav-card:hover {
+    border-color: var(--primary);
+}

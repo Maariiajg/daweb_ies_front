@@ -1,1 +1,30 @@
-<p>alumno-detail works!</p>
+<div class="detail-container">
+    <div class="card detail-card">
+        <div class="card-header">
+            <div class="avatar-large">
+                {{alumno?.nombre?.charAt(0) || '?'}}
+            </div>
+            <h2>{{alumno?.nombre}} {{alumno?.apellidos}}</h2>
+            <span class="badge primary">Alumno</span>
+        </div>
+        
+        <div class="card-body">
+            <div class="info-row">
+                <span class="label">ID de Estudiante:</span>
+                <span class="value">{{alumno?.id}}</span>
+            </div>
+            <div class="info-row">
+                <span class="label">Nombre Completo:</span>
+                <span class="value">{{alumno?.nombre}} {{alumno?.apellidos}}</span>
+            </div>
+            <div class="info-row">
+                <span class="label">Usuario iPasen:</span>
+                <span class="value highlight">{{alumno?.ipasen}}</span>
+            </div>
+        </div>
+        
+        <div class="card-footer">
+            <a [routerLink]="['/alumno']" class="btn btn-secondary">← Volver al listado</a>
+        </div>
+    </div>
+</div>

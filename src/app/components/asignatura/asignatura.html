@@ -1,1 +1,25 @@
-<p>asignatura works!</p>
+<div class="list-header">
+    <h2>Oferta Académica</h2>
+    <p>Consulta las asignaturas disponibles y su carga horaria.</p>
+</div>
+
+<div class="grid-container">
+    @for (asignatura of asignaturas; track asignatura.id) {
+        <div class="card asignatura-card">
+            <div class="card-content">
+                <div class="icon-badge">
+                    <span class="horas">{{asignatura.horas}}h</span>
+                </div>
+                <h3>{{asignatura.nombre}}</h3>
+                <p class="desc">Asignatura técnica del plan de estudios.</p>
+                <div class="footer-info">
+                    <span class="label">ID: {{asignatura.id}}</span>
+                </div>
+            </div>
+        </div>
+    } @empty {
+        <div class="empty-state">
+            <p>No hay asignaturas disponibles.</p>
+        </div>
+    }
+</div>

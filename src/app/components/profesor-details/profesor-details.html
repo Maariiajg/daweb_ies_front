@@ -1,1 +1,36 @@
-<p>profesor-details works!</p>
+<div class="detail-container">
+    <div class="card detail-card">
+        @if (profesor) {
+            <div class="card-header secondary">
+                <div class="avatar-large secondary">
+                    {{profesor.nombre?.charAt(0) || '?'}}
+                </div>
+                <h2>{{profesor.nombre}} {{profesor.apellidos}}</h2>
+                <span class="badge secondary">Cuerpo Docente</span>
+            </div>
+            
+            <div class="card-body">
+                <div class="info-row">
+                    <span class="label">ID de Registro:</span>
+                    <span class="value">{{profesor.id}}</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">Nombre Completo:</span>
+                    <span class="value">{{profesor.nombre}} {{profesor.apellidos}}</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">Especialidad:</span>
+                    <span class="value highlight-secondary">{{profesor.especialidad}}</span>
+                </div>
+            </div>
+        } @else {
+            <div class="loading-state">
+                <p>Cargando detalles del profesor...</p>
+            </div>
+        }
+        
+        <div class="card-footer">
+            <a [routerLink]="['/profesores']" class="btn btn-secondary">← Volver al listado</a>
+        </div>
+    </div>
+</div>

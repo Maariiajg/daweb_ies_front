@@ -1,0 +1,81 @@
+.list-header {
+    margin-bottom: var(--space-xl);
+}
+
+.list-header p {
+    color: var(--text-muted);
+}
+
+.table-container {
+    padding: 0;
+    overflow: hidden;
+}
+
+.modern-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.modern-table th {
+    background-color: #f8fafc;
+    padding: var(--space-md) var(--space-lg);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border);
+}
+
+.modern-table td {
+    padding: var(--space-md) var(--space-lg);
+    border-bottom: 1px solid var(--border);
+    font-size: 0.875rem;
+}
+
+.modern-table tr:last-child td {
+    border-bottom: none;
+}
+
+.id-cell {
+    font-family: monospace;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.badge {
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: 0.75rem;
+}
+
+.badge.passed {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.badge.failed {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.status-indicator {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: var(--space-xs);
+    background-color: #ef4444;
+}
+
+.status-indicator.active {
+    background-color: #22c55e;
+}
+
+.empty-row {
+    text-align: center;
+    padding: var(--space-xl) !important;
+    color: var(--text-muted);
+}

@@ -1,0 +1,24 @@
+footer {
+    background-color: var(--surface);
+    border-top: 1px solid var(--border);
+    padding: var(--space-xl) 0;
+    margin-top: var(--space-xl);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+    text-align: center;
+}
+
+footer p {
+    font-weight: 500;
+    color: var(--text);
+}
+
+footer p.muted {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-top: var(--space-xs);
+}

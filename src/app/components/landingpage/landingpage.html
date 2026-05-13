@@ -1,1 +1,30 @@
-<p>landingpage works!</p>
+<div class="hero">
+    <h1>Bienvenido a DAWEB IES</h1>
+    <p>Sistema integral de gestión académica para alumnos y profesores.</p>
+</div>
+
+<div class="dashboard-grid">
+    <div class="card nav-card" [routerLink]="['/alumno']">
+        <div class="icon">👥</div>
+        <h3>Gestión de Alumnos</h3>
+        <p>Administra los expedientes de los estudiantes matriculados.</p>
+    </div>
+    
+    <div class="card nav-card" [routerLink]="['/profesores']">
+        <div class="icon">👨‍🏫</div>
+        <h3>Cuerpo Docente</h3>
+        <p>Accede a la información detallada de los profesores.</p>
+    </div>
+    
+    <div class="card nav-card" [routerLink]="['/asignatura']">
+        <div class="icon">📚</div>
+        <h3>Asignaturas</h3>
+        <p>Consulta la oferta académica y carga horaria.</p>
+    </div>
+    
+    <div class="card nav-card" [routerLink]="['/matricula']">
+        <div class="icon">📝</div>
+        <h3>Matriculación</h3>
+        <p>Control de inscripciones y seguimiento de notas.</p>
+    </div>
+</div>

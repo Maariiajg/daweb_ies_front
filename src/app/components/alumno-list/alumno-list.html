@@ -1,1 +1,25 @@
-<p>alumno-list works!</p>
+<div class="list-header">
+    <h2>Nuestros Alumnos</h2>
+    <p>Gestiona y visualiza la información de los estudiantes matriculados.</p>
+</div>
+
+<div class="grid-container">
+    @for (alumno of alumnos; track alumno.id) {
+        <div class="card alumno-card">
+            <div class="card-content">
+                <div class="avatar">
+                    {{alumno.nombre?.charAt(0) || '?'}}
+                </div>
+                <h3>{{alumno.nombre}}</h3>
+                <p class="ipasen"><strong>iPasen:</strong> {{alumno.ipasen}}</p>
+                <div class="actions">
+                    <a [routerLink]="['/alumno', alumno.id]" class="btn btn-primary">Ver Detalles</a>
+                </div>
+            </div>
+        </div>
+    } @empty {
+        <div class="empty-state">
+            <p>No hay alumnos registrados actualmente.</p>
+        </div>
+    }
+</div>

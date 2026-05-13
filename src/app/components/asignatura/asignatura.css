@@ -1,0 +1,58 @@
+.list-header {
+    margin-bottom: var(--space-xl);
+}
+
+.list-header p {
+    color: var(--text-muted);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-lg);
+}
+
+.asignatura-card {
+    border-top: 4px solid var(--accent);
+}
+
+.icon-badge {
+    margin-bottom: var(--space-md);
+}
+
+.horas {
+    background-color: #fef3c7;
+    color: #92400e;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.desc {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-bottom: var(--space-lg);
+}
+
+.footer-info {
+    border-top: 1px solid var(--border);
+    padding-top: var(--space-sm);
+    margin-top: auto;
+}
+
+.label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-family: monospace;
+}
+
+.empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: var(--space-xl);
+    background: var(--surface);
+    border-radius: var(--radius-md);
+    border: 1px dashed var(--border);
+    color: var(--text-muted);
+}

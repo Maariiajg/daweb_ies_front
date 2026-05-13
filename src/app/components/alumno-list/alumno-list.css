@@ -1,0 +1,63 @@
+.list-header {
+    margin-bottom: var(--space-xl);
+}
+
+.list-header p {
+    color: var(--text-muted);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-lg);
+}
+
+.alumno-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.card-content {
+    width: 100%;
+}
+
+.avatar {
+    width: 64px;
+    height: 64px;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 auto var(--space-md);
+}
+
+.ipasen {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    margin-bottom: var(--space-lg);
+}
+
+.actions {
+    margin-top: var(--space-md);
+}
+
+.actions .btn {
+    width: 100%;
+    justify-content: center;
+}
+
+.empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: var(--space-xl);
+    background: var(--surface);
+    border-radius: var(--radius-md);
+    border: 1px dashed var(--border);
+    color: var(--text-muted);
+}

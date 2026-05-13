@@ -1,1 +1,26 @@
-<p>header works!</p>
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <a [routerLink]="['']">DAWEB IES</a>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a [routerLink]="['']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Inicio</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/alumno']" routerLinkActive="active">Alumnos</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/profesores']" routerLinkActive="active">Profesores</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/asignatura']" routerLinkActive="active">Asignaturas</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/matricula']" routerLinkActive="active">Matricula</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>

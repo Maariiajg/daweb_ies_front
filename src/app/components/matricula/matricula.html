@@ -1,1 +1,40 @@
-<p>matricula works!</p>
+<div class="list-header">
+    <h2>Registro de Matrículas</h2>
+    <p>Seguimiento de inscripciones y calificaciones de los alumnos.</p>
+</div>
+
+<div class="card table-container">
+    <table class="modern-table">
+        <thead>
+            <tr>
+                <th>ID Matrícula</th>
+                <th>Alumno ID</th>
+                <th>Asignatura ID</th>
+                <th>Nota</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (matricula of matriculas; track matricula.id) {
+                <tr>
+                    <td class="id-cell">{{matricula.id}}</td>
+                    <td>{{matricula.alumnoId}}</td>
+                    <td>{{matricula.asignaturaId}}</td>
+                    <td class="nota-cell">
+                        <span class="badge" [class.passed]="matricula.nota >= 5" [class.failed]="matricula.nota < 5">
+                            {{matricula.nota}}
+                        </span>
+                    </td>
+                    <td>
+                        <span class="status-indicator" [class.active]="matricula.nota >= 5"></span>
+                        {{matricula.nota >= 5 ? 'Aprobado' : 'Suspenso'}}
+                    </td>
+                </tr>
+            } @empty {
+                <tr>
+                    <td colspan="5" class="empty-row">No hay matrículas registradas.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

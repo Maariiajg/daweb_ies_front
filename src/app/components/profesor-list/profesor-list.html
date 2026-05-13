@@ -1,1 +1,25 @@
-<p>profesor-list works!</p>
+<div class="list-header">
+    <h2>Cuerpo Docente</h2>
+    <p>Listado de profesores y sus especialidades.</p>
+</div>
+
+<div class="grid-container">
+    @for (profesor of profesores; track profesor.id) {
+        <div class="card profesor-card">
+            <div class="card-content">
+                <div class="avatar secondary">
+                    {{profesor.nombre?.charAt(0) || '?'}}
+                </div>
+                <h3>{{profesor.nombre}}</h3>
+                <p class="especialidad"><strong>Especialidad:</strong> {{profesor.especialidad}}</p>
+                <div class="actions">
+                    <a [routerLink]="['/profesores', profesor.id]" class="btn btn-primary">Ver Perfil</a>
+                </div>
+            </div>
+        </div>
+    } @empty {
+        <div class="empty-state">
+            <p>No hay profesores registrados actualmente.</p>
+        </div>
+    }
+</div>
